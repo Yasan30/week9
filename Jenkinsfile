@@ -9,14 +9,14 @@ pipeline {
         }
         stage('Docker Login') {
             steps {
-                bat 'docker login -u joshitha2404 -p srilakshmi@2005'
+                bat 'docker login -u yasan30 -p Gnit@2023'
             }
         }
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag kubdemoapp:v1 joshitha2404/sample:kubeimage1"
-                bat "docker push joshitha2404/sample:kubeimage1"
+                bat "docker tag kubdemoapp:v1 yasan30/sample:kubeimage1"
+                bat "docker push yasan30/sample:kubeimage1"
             }
         }
         stage('Deploy to Kubernetes') {
